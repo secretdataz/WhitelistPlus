@@ -1,0 +1,10 @@
+JoinLevel:
+    Level: 0
+    KickMessage: "Sorry\, you don't have enough permission to join the server."
+Engine: "MySQL"
+MySQL:
+    host: "localhost"
+    port: 3306
+    database: "bukkit"
+    username: "root"
+    password: ""

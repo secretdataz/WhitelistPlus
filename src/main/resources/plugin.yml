@@ -1,0 +1,29 @@
+name: WhitelistPlus
+author: secretdataz
+site: Ahri.in.th
+main: th.in.ahri.WhitelistPlus.WhitelistPlus
+version: ${version}
+commands:
+    wlsetjoinlevel:
+        description: Temporarily set JoinLevel variable for WhitelistPlus
+        usage: /wlsetjoinlevel <level>
+        permission: whitelistplus.setlevel
+    wladd:
+        description: Add a player to whitelist
+        usage: /wladd <name> <level>
+        permission: whitelistplus.modify
+    wledit:
+        description: Modify level of a player
+        usage: /wledit <name> <newlevel>
+        permission: whitelistplus.modify
+    wldelete:
+        description: Remove a player from whitelist
+        usage: /wldelete <name>
+        permission: whitelistplus.modify
+permissions:
+    whitelistplus.setlevel:
+        description: Allows you to set JoinLevel variable for WhitelistPlus
+        default: op
+    whitelistplus.modify:
+        description: Allows you to modify whitelist
+        default: op
