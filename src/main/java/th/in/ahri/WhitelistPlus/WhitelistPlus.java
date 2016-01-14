@@ -28,6 +28,7 @@ public class WhitelistPlus extends JavaPlugin{
         if(config.getString("Engine").equalsIgnoreCase("MySQL")){
             engine = new MySqlWhitelistEngine(config.getString("MySQL.host", "localhost"), config.getInt("MySQL.port", 3306)
             , config.getString("MySQL.database"), config.getString("MySQL.username"), config.getString("MySQL.password"));
+            if(!engine.hasDatabase()) engine.createDatabase();
         }else{
             logger.severe("Unknown whitelist engine. Disabling WhitelistPlus.");
             this.setEnabled(false);
